@@ -3,6 +3,7 @@ import { createRouter, createWebHistory} from 'vue-router'
 //page
 import Home from '../views/page/HomePage.vue'
 import AddContact from '../views/page/AddContactPage.vue'
+import ErrorPage from '../views/page/ErrorPage.vue'
 //layouts
 import MainLayout from '../views/layouts/MainLayout.vue'
 const routes = [
@@ -27,6 +28,18 @@ const routes = [
                 path: '',
                 name: 'AddContactPage',
                 component: AddContact
+            }
+        ]
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'Error',
+        component: MainLayout,
+        children: [
+            {
+                path: '',
+                name: 'ErrorPage',
+                component: ErrorPage
             }
         ]
     }
