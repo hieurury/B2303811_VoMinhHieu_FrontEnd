@@ -8,7 +8,7 @@ import { lang, toggleLang } from '../../hooks/useLang';
 <template>
     <header>
         <NSpace 
-        class="bg-gradient-to-r from-slate-200 to-white dark:from-slate-800 dark:to-slate-700 dark:text-gray-300 text-slate-700 p-4" 
+        class="bg-linear-to-r from-slate-200 to-white dark:from-slate-800 dark:to-slate-700 dark:text-gray-300 text-slate-700 p-4" 
         justify="space-between" 
         align="center">
             <router-link to="/">
@@ -18,7 +18,7 @@ import { lang, toggleLang } from '../../hooks/useLang';
                 <router-link to="/add-contact">
                     <NButton type="primary">{{ lang === 'en' ? 'Add Contact' : 'Thêm Liên Hệ' }}</NButton>
                 </router-link>
-                <NSpace class="border-l-1 pl-2 border-gray-300" align="center">
+                <NSpace class="border-l pl-2 border-gray-300" align="center">
                     <NButton @click="toggleLang">
                         <template #icon>
                             <img v-if="lang === 'en'" src="/en-flag.svg" alt="">
